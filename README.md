@@ -1,8 +1,15 @@
 # T8-bootstrap-sass
 
+[AULA 01 - 07/10](#aula-1---0710) | 
+[AULA 02 - 08/10](#aula-2---0810) |
+[AULA 03 - 09/10](#aula-3---0910) |
+[AULA 04 - 10/10](#aula-4---1010) |
+
 # Bootstrap
 ## Documentação 
 [Documentação do Bootstrap PT/BR](https://getbootstrap.com.br/docs/4.1/getting-started/introduction/)
+
+---
 
 ## Instalação
 ### Instalação por CDN
@@ -47,6 +54,23 @@
 
 ### Instalação via npm (extra!)
 
+---
+
+## Conteúdo que vamos abordar :)
+
+- [ ] [Navbar](https://getbootstrap.com.br/docs/4.1/components/navbar/)
+- [ ] [Carousel](https://getbootstrap.com.br/docs/4.1/components/carousel/) 
+- [ ] [Flex](https://getbootstrap.com.br/docs/4.1/utilities/flex/)
+- [ ] [Texto](https://getbootstrap.com.br/docs/4.1/utilities/text/)
+- [ ] [Alinhamento](https://getbootstrap.com.br/docs/4.1/utilities/vertical-align/)
+- [ ] [Cores](https://getbootstrap.com.br/docs/4.1/utilities/colors/)
+- [ ] [Espeçamento](https://getbootstrap.com.br/docs/4.1/utilities/spacing/)
+- [ ] [Cards](https://getbootstrap.com.br/docs/4.1/components/card/)
+- [ ] [Grid](https://getbootstrap.com.br/docs/4.1/layout/grid/)
+- [ ] [Modal](https://getbootstrap.com.br/docs/4.1/components/carousel/)
+
+---
+
 ## Aula 1 - 07/10
 - O que é Bootstrap?
 
@@ -62,8 +86,7 @@
     Experiência do Usuário | 
     Acessibilidade com uso de classes | 
 
-- Percorrendo a documentação
-- data-toggle e data-target
+- **data-toggle** e **data-target**
 
     O **data-toggle** é um atributo de dados do HTML5 que liga automaticamente o elemento ao tipo correspondente.
 
@@ -112,27 +135,38 @@
 
     ```
 
+    Entenda mais sobre os atributos **data-*** no artigo abaixo:
+    - [Tudo que você precisa saber sobre o atributo Data do HTML5](https://webdesign.tutsplus.com/pt/tutorials/all-you-need-to-know-about-the-html5-data-attribute--webdesign-9642)
+
+- Display **grid**
+
+    Entenda mais sobre o display **grid** no guia abaixo:
+    - [Guia CSS Grid Layout](https://www.origamid.com/projetos/css-grid-layout-guia-completo/)
+
+---
+
 ## Aula 2 - 08/10
+
 ### Começando o nosso projeto 
-1. Clone o repositório
-2. Entre no diretório `./portfolio-nome`
-3. [Instale](#instalação) o Bootstrap no arquivo `<html>` do projeto
-4. Abra a [documentação](#documentação) do Bootstrap no seu navegador
-5. #boracomeçar!
+1. Faça o download deste repositório [reprograma/T8-bootstrap-preprocessadores](https://github.com/reprograma/T8-bootstrap-preprocessadores)
+2. Crie um novo repositório no seu Github seguindo esse modelo de nome: **seu-nome.github.io**
+2. Copie a pasta clonada `./portfolio-nome`
+4. Renomeie com o seu nome
+5. Entre no diretório `./portfolio-nome`
+6. [Instale](#instalação) o Bootstrap no arquivo `<html>` do projeto
+7. Abra a [documentação](#documentação) do Bootstrap no seu navegador
+8. #boracomeçar!
 
 ### Portfólio ♡  
 - Quais componentes vamos construir?
     - [ ] Navbar
-    - [ ] Formulário de contato
-    - [ ] Carousel de fotos
-    - [ ] Seção - Quem sou
-    - [ ] Seção - Habilidades
-    - [ ] Cards - Meus projetos
+    - [ ] Carousel
+    - [ ] Seção - Habilidade e Sobre
+    - [ ] Seção - Meus projetos
     - [ ] Footer
+
+---
 
 # Sass
 ## Aula 3 - 09/10
 ## Aula 4 - 10/10
-
-[link do layout 1](https://dribbble.com/shots/7158635-TheHub-Website-Exploration-01)
-[link do layout 2](https://dribbble.com/shots/3937735-Payment-Interaction)
