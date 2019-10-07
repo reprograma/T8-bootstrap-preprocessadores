@@ -165,6 +165,10 @@
     - [ ] Seção - Meus projetos
     - [ ] Footer
 
+- Como ele vai ficar?
+
+![portfolio-nome](/imagens/portfolio-nome.png)
+
 ---
 
 # Sass
