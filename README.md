@@ -238,7 +238,7 @@ Para instalarmos o **Sass** via **npm**, precisamos verificar se a nossa máquin
     * Funcionalidades que o css não possui
     * Manutenção
 
-### Começando o nossa experiência
+### Começando a configurar o nosso ambiente!
 
 1. Faça o download deste repositório [reprograma/T8-bootstrap-preprocessadores](https://github.com/reprograma/T8-bnomeootstrap-preprocessadores)
 5. Entre no diretório `./pasta-do-projeto`, utilize o seu terminal através do comando `cd pasta-do-projeto`
