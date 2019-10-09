@@ -21,7 +21,7 @@
 
     Existem várias redes **CDN**, e qualquer empresa pode contratar o serviço de uma para seu sistema, essa decisão normalmente é tomada levando em conta vários aspectos como ganhos de performance, segurança e custos.
 
-- Como instalar o Bootstrap no seu projeto?
+- Como instalar o Bootstrap via CDN no seu projeto?
 
     A instalação por **CDN** é a maneira mais rápida de instalar o Bootstrap no seu projeto, sem a necessidade de baixar os arquivos e adicioná-los no seu diretório. 
 
@@ -172,5 +172,178 @@
 ---
 
 # Sass
+## Documentação 
+[Documentação do Sass](http://www.sass-lang.com/documentation)
+
+---
+
+## Instalação
+### Instalação via npm
+
+Para instalarmos o **Sass** via **npm**, precisamos verificar se a nossa máquina possui o **node.js** instalado, é só rodar no seu terminal o comando `node -v`, se ele não apresentar a versão assim `v10.15.3` é só baixar ele [aqui!](https://nodejs.org/en/)
+
+[O que é npm? - Introdução básica para iniciantes](https://www.hostinger.com.br/tutoriais/o-que-e-npm)
+
+### Instalando o Sass
+
+1. No terminal, entre no diretório do seu projeto e rode o comando `npm init` responda ao comando, logo após será gerado um arquivo `package.json`
+
+    ![instalando-sass-npm-init](/imagens/instalando-sass-npm-init.jpg)
+
+2. Ainda no terminal instale o sass através do comando `npm install sass --save-dev`, será gerado um arquivo `package-lock.json` e uma pasta `./node_modules`
+
+    ![instalando-sass-npm-install](/imagens/instalando-sass-npm-install.jpg)
+
+3. Crie um arquivo `.gitignore` junto aos arquivos `.json` com a seguinte linha de texto dentro:
+
+    ![instalando-sass-gitignore](/imagens/instalando-sass-gitignore.jpg)
+
+4. Agora vamos estruturar as pastas da seguinte maneira: 
+
+    ![instalando-sass-estrutura-pastas](/imagens/instalando-sass-estrutura-pastas.jpg)
+
+5. Vamos fazer um teste, dentro do arquivo `_base` adicionameremos uma propriedade `background-color: black` ao `<html>` e em seguida iremos importá-lo no arquivo `style.scss` assim: 
+
+    ![instalando-sass-import](/imagens/instalando-sass-import.jpg)
+
+6. Vamos adicionar o script `"sass styles/style.scss styles/style.css"` no arquivo `package.json`
+
+    ![instalando-sass-script](/imagens/instalando-sass-script.jpg)
+
+7. Agora é só rodar no terminal o comando `npm run sass` e ele irá compilar o arquivo gerando um arquivo `style.css`
+
+    ![instalando-sass-compiler](/imagens/instalando-sass-compiler.jpg)
+
+8. Caso queira que o arquivo seja compilado de modo automático é só rodar o seguinte comando `sass --watch styles/style.scss styles/style.css`
+
+--- 
+
+## Conteúdo que vamos abordar :)
+
+- [ ] Imports
+- [ ] Partials
+- [ ] Aninhamento
+- [ ] Variáveis
+- [ ] Mixins e includes - com parâmetro
+- [ ] Mixins e includes - sem parâmetro
+- [ ] Placeholders e extends
+- [ ] Funções
+
 ## Aula 3 - 09/10
+
+- Quais as vantagens de usar o Sass?
+
+    * Evitar duplicação de código
+    * Código Limpo
+    * Funcionalidades que o css não possui
+    * Manutenção
+
+### Começando o nossa experiência
+
+1. Faça o download deste repositório [reprograma/T8-bootstrap-preprocessadores](https://github.com/reprograma/T8-bnomeootstrap-preprocessadores)
+5. Entre no diretório `./pasta-do-projeto`, utilize o seu terminal através do comando `cd pasta-do-projeto`
+3. **Tenha a certeza de estar dentro da pasta** `./pasta-do-projeto`
+6. Agora vamos [instalar](#instalando) o Sass 
+
 ## Aula 4 - 10/10
+
+- Partials
+
+Para modularizar nosso código e deixar mais fácil de configurar, conseguimos separar em arquivos chamados **partials**, que são pedaços de css separados em arquivos e que recebem um **_** no começo do nome, para que o Sass entenda que não deve gerar o código no css, só quando chamarmos por **@import**.
+
+![sass-partials](/imagens/sass-partials.PNG)
+
+- Imports
+
+Para fazer com que os nossos partials sejam gerados no css é necessário importá-los no arquivo **.scss** principal.
+
+**Lembrando que a ordem que a gente chama os @imports é a ordem que será gerado no css.**
+
+![imports-sass](/imagens/imports-sass.PNG)
+
+- Aninhamento
+
+`.scss`
+
+![navegacao--scss](/imagens/navegacao--scss.PNG)
+
+`.css`
+
+![navegacao--css](/imagens/navegacao--css.PNG)
+
+- Variáveis
+
+`.scss`
+
+![vars--example](/imagens/vars--example.PNG)
+
+`.css`
+
+![vars--example-css](/imagens/vars--example--css.PNG)
+
+- Mixins | @include
+
+    * sem parâmetros:
+
+    ![mixin--sem-parametros](/imagens/mixin--sem-parametros.PNG)
+
+    * com parâmetros: 
+
+    ![mixin--com-parametros-sem-valor-padrao](/imagens/mixin--com-parametros-sem-valor-padrao.PNG)
+
+    * com parâmetros e valor padrão: 
+
+    ![mixin--com-parametros-com-valor-padrao](/imagens/mixin--com-parametros-com-valor-padrao.PNG) 
+
+- Placeholders | @extends
+
+    ![placeholder-height-display](/imagens/placeholder-height-display.PNG)
+
+    ![placeholdercall-height-display](/imagens/placeholdercall-height-display.PNG)
+
+- Mixin vs. Placeholders
+
+    Assim como o **mixin**, os **placeholders** também são trechos de código que podemos reutilizar, mas se ele faz a mesma coisa que o mixin, por que utilizarmos?
+
+    ![mixin-height-display](/imagens/mixin-height-display.PNG)
+
+    ![mixincall-height-display](/imagens/mixincall-height-display.PNG)
+
+    * Resultado Mixin
+
+    ![banner-destination-css](/imagens/banner-destination-css.PNG)
+
+    * Resultado Placeholder
+
+    ![ideal-css](/imagens/ideal-css.PNG)
+
+    **Não podemos criar placeholders com parâmetros, como fazemos com os mixins.**
+
+- Funções de cores
+
+    * `darken($color, $amount)` > `darken(black, 20%)`
+    * `lighten($color, $amount)` > `darken(#829dad, 70%)`
+    
+- Funções com números
+
+    Funções, diferente dos mixins, retornam valores, e não trechos de código.
+
+    ![mixin-adapta](/imagens/mixin-adapta.PNG)
+
+    Quando chamado no `.scss` >
+
+    `@include adapta-tamanho(2);`
+
+    Resultado no `.css` >
+
+    `height: 32px;`
+
+    ![funcao-adapta](/imagens/funcao-adapta.PNG)
+
+    Quando chamada no `.scss` >
+
+    `margin-top: adapta-tamanho(2);`
+
+    Resultado no `.css` >
+
+    `margin-top: 32px;`
