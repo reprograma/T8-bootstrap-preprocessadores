@@ -347,3 +347,7 @@ Para fazer com que os nossos partials sejam gerados no css é necessário import
     Resultado no `.css` >
 
     `margin-top: 32px;`
+
+- Layout 
+
+![layout-landing-page](/imagens/layout-landing-page.png)
